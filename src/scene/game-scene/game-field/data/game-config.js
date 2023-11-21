@@ -1,0 +1,38 @@
+import { ENEMY_TYPE } from "../enemies/data/enemy-data";
+
+const GAME_CONFIG = {
+  cellSize: 1,
+  gravity: 9.8,
+  sceneBlur: 5,
+  helpers: false,
+}
+
+const ROUND_CONFIG = {
+  maxRound: 4,
+  roundDuration: 30000,
+  player: [
+    { speedMultiplier: 1 },
+    { speedMultiplier: 1.1 },
+    { speedMultiplier: 1.2 },
+    { speedMultiplier: 1.3 },
+    { speedMultiplier: 1.4 },
+  ],
+  enemies: {
+    [ENEMY_TYPE.Ghost]: [
+      { speedMultiplier: 1, maxCount: 4 },
+      { speedMultiplier: 1.25, maxCount: 5 },
+      { speedMultiplier: 1.5, maxCount: 7 },
+      { speedMultiplier: 1.75, maxCount: 8 },
+      { speedMultiplier: 2, maxCount: 10 },
+    ],
+    [ENEMY_TYPE.EvilPumpkin]: [
+      { speedMultiplier: 1, count: 1 },
+      { speedMultiplier: 1.1, count: 2 },
+      { speedMultiplier: 1.2, count: 3 },
+      { speedMultiplier: 1.3, count: 4 },
+      { speedMultiplier: 1.4, count: 5 },
+    ],
+  }
+}
+
+export { GAME_CONFIG, ROUND_CONFIG };
